@@ -1,0 +1,141 @@
+
+  <div *ngIf="bool; then thenBlock ; else elseBlock" ></div>
+    <div>
+      <ng-template #elseBlock>
+      <h4>Clients</h4>
+      <div>
+        <label><strong>Nom:</strong></label> {{ currentClient.firstname }}
+      </div>
+      <div>
+        <label><strong>Prénom:</strong></label>
+        {{ currentClient.lastname }}
+      </div>
+      <div>
+        <label><strong>Email:</strong></label>
+        {{ currentClient.email }}
+      </div>
+      <div>
+        <label><strong>Tél:</strong></label>
+        {{ currentClient.phone }}
+      </div>
+      <div>
+        <label><strong>Addresse:</strong></label>
+        {{ currentClient.address }}
+      </div>
+      <div>
+        <label><strong> Date de naissance:</strong></label>
+        {{ currentClient.dateOfBirth }}
+      </div>
+      <div>
+        <label><strong>confirmation d'Email:</strong></label>
+        {{ currentClient.confirmationEmail }}
+      </div>
+     
+      <button
+      class="btn btn-brown"
+        (click)="getData()"
+      >
+        Modifier
+      </button>
+      <br />
+     
+      <p>sélectionner un client</p>
+     
+     </ng-template>
+     </div>
+
+     <ng-template #thenBlock>
+
+      <div  class="edit-form">
+        <h4>Client</h4>
+        <form>
+          <div class="form-group">
+            <label for="firstname">Nom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              [(ngModel)]="currentClient.firstname"
+              name="firstName"
+            />
+            <div class="form-group">
+              <label for="lastname">Prénom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                [(ngModel)]="currentClient.lastname"
+                name="lastName"
+              />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="currentClient.email"
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Tél</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              [(ngModel)]="currentClient.phone"
+              name="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.address"
+              name="address"
+            />
+          </div>        
+          <div class="form-group">
+            <label for="address">Confirmation d'Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.confirmationEmail"
+              name="address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Date de naissance</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              [(ngModel)]="currentClient.dateOfBirth"
+              name="address"
+            />
+          </div>
+  
+    
+    
+       
+        <button
+          type="submit"
+          class="btn btn-brown"
+          (click)="updateClient()"
+        >
+          Update
+        </button>
+     
+        <p>{{ message }}</p>
+      </div>
+   
+      <div *ngIf="!currentClient.id">
+        <br />
+        <p>Cannot access this Client...</p>
+      </div>
+    
+

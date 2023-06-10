@@ -1,0 +1,45 @@
+.profile{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);    
+    border: 1px solid brown;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+}
+
+h1{
+    font-weight: bold;
+    color:brown;
+    font-family: sans-serif;
+    transform: translate(140px,-70%);
+}
+.special{
+    display: flex;
+}
+.labels{
+    flex-basis: 30%;
+}
+.labels label{
+    font-size: 16px;
+    height: 20px;
+    color: black;
+    margin: 5px;
+    line-height: 32px;
+}
+.inputs{
+    flex-basis: 65%;
+}
+.inputs input{
+    width:90%;
+    height: 20px;
+    color:rgb(32, 1, 1);
+    font-size: 16px;
+    margin: 8px;
+    background-color: transparent;
+    border:2px solid brown;
+    outline: none;
+    padding: 15px;
+}

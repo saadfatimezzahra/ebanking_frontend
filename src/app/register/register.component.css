@@ -1,0 +1,40 @@
+
+mat-card{
+    width: 30%;
+    margin: 10% auto;
+    border-radius: 8px;
+}
+
+.login-button{
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin:20px auto;
+    background-color: #8B4513;
+}
+
+
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #8B4513;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B4513;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #8B4513;
+  }

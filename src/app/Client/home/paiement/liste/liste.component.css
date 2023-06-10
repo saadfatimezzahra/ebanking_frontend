@@ -1,0 +1,35 @@
+
+
+
+.creancier {
+  width: 45%;
+  height: 30%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.creancier:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.creancier img {
+  width: 35%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.creancier .description {
+  padding: 10px;
+}
+
+h6 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.border-brown {
+  border: 1px solid brown;
+  padding: 20px;
+}

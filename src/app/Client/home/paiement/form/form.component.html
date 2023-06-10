@@ -1,0 +1,18 @@
+<div class="container border-brown">
+  <form class="form" action="" accept-charset="YTF-8" method="post">
+    <h3 class="title text-left">Effectuer un paiement</h3>
+      <input type="text" id="nom" name="nom" placeholder="{{facture.id}}" readonly/><br>
+      <input type="text" id="nom" name="montant" placeholder="{{facture.montant}}" readonly> <br>
+        <div class="form-group mr-3">
+              <button type="button" class="btn btn-outline-brown mr-2">Annuler</button>
+              <button type="submit" class="btn btn-brown" (click)="valider()" >Valider</button>
+        </div>
+
+    </form>
+    <h1> </h1>
+    <form class="form" action="" accept-charset="YTF-8" method="post" *ngIf="{result}">
+      <input  type="text" id="nom" name="nom" placeholder="saisir le code envoyé à votre tél"/>
+      <br />
+      <button class="btn btn-brown" type="submit" (click)="payer()">Valider</button>
+    </form>
+</div>

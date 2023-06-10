@@ -1,0 +1,80 @@
+<div class="container border-brown">
+    <h3 class="title text-center text-uppercase">Informations personnelles</h3>
+
+    <form>
+        <div class="form-row">
+            <div class="form-group">
+              <label for="Nom">Nom</label>
+              <input type="text" [(ngModel)]="agent.firstname" [ngModelOptions]="{standalone: true}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Prénom">Prénom</label>
+              <input type="text" required  [(ngModel)]="agent.lastname" [ngModelOptions]="{standalone: true}" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" required [(ngModel)]="agent.email" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+   
+        <div class="form-group">
+            <label for="emai">Confirmation Email</label>
+            <input type="email" required [(ngModel)]="agent.confirmationEmail" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input type="text"required [(ngModel)]="agent.address" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="piece">Pièce d'identité</label>
+            <select id="piece" class="form-control">
+              <option value="carte-identite">CIN</option>
+              <option value="passeport">Passeport</option>
+              <option value="permis-conduire">Permis de conduire</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="numid">N°pièce d'identité</label>
+            <input type="text" required  [(ngModel)]="agent.pieceIdentity" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="numphone">N°de téléphone</label>
+            <input type="text" required  [(ngModel)]="agent.phone" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="numpatente">N°de patente</label>
+            <input type="text" required [(ngModel)]="agent.n_Pattente" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="imma">N°d'immatriculation au registre de commerce</label>
+            <input type="text" required  [(ngModel)]="agent.n_Immatr" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+    </div>
+    </form>
+
+<h3>Pièces jointes</h3>
+<hr>
+<div class="form-group">
+    <label for="desc">Description</label>
+    <input type="text" id="desc" class="form-control">
+</div>
+<div class="form-group">
+            <label for="identite">Fichier</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="identite">
+            </div>
+          </div>
+<div class="form-row justify-content-end mt-4">
+        <div class="form-group mr-3">
+              <button type="button" class="btn btn-outline-brown mr-2">Annuler</button>
+              <button type="submit" class="btn btn-brown" (click)="saveAgent()">Envoyer</button>
+        </div>
+</div> 
+</div>

@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    background-color: #8B4513;
+    height: 50px;
+}
+.option{
+    width: 400px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+.option:hover{
+    background-color: #8B4513;
+}
+.option a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}

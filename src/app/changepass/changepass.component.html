@@ -1,0 +1,23 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12">
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+            <mat-tab label="Changer le mot passe">
+                    <h1> </h1>
+                    <form  (ngSubmit)="changePassword()"  >
+                            <input type="text"
+                            matInput placeholder="email" required name="oldPassword"  [(ngModel)]="oldPassword">
+                            <input type="password"
+                            matInput placeholder="nouveau mot de passe" required minlength="6"  name="newPassword" [(ngModel)]="newPassword" >
+                            
+                            <input type="password"
+                            matInput placeholder="confirmer mot de passe" required minlength="6" name="confirmPassword" [(ngModel)]="confirmPassword" >
+
+                            <button mat-raised-button color="primary" class="login-button">Changer le mot de passe</button>
+                        <div class="form-group">
+                           
+                          </div>
+                    </form>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

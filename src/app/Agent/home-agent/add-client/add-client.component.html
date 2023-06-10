@@ -1,0 +1,90 @@
+<div class="container border-brown">
+  <h3 class="title text-center text-uppercase">Informations Client</h3>
+
+  <form>
+      <div class="form-row">
+          <div class="form-group">
+            <label for="Nom">Nom</label>
+            <input type="text" id="Nom" class="form-control"  required [(ngModel)]="client.firstname"
+             name="firstname">
+          </div>
+          <div class="form-group">
+            <label for="Prénom">Prénom</label>
+            <input type="text" id="Prénom" class="form-control" required [(ngModel)]="client.lastname"
+            name="lastname">
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" class="form-control" required  [(ngModel)]="client.email"
+          name="emal">
+          </div>
+ 
+          <div class="form-group">
+          <label for="emai">Confirmation Email</label>
+          <input type="email" id="emai" class="form-control" required [(ngModel)]="client.confirmationEmail" name="email">
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group">
+          <label for="adresse">Adresse</label>
+          <input type="text" id="adresse" class="form-control" required [(ngModel)]="client.address" name="address">
+          </div>
+          <div class="form-group">
+            <label for="numid">Date de naissance</label>
+            <input type="text" id="numid" class="form-control"  required
+            [(ngModel)]="client.dateOfBirth"
+             name="date">
+            </div>
+          </div>
+          
+      <div class="form-row">
+          <div class="form-group">
+          <label for="numid">pièce d'identité</label>
+          <input type="text" id="numid" class="form-control" required [(ngModel)]="client.pieceIdentity"  name="pieceIdentity">
+          </div>
+          <div class="form-group">
+          <label for="numphone">N°pièce d'identité</label>
+          <input type="text" id="numphone" class="form-control" required
+          [(ngModel)]="client.n_pieceIdentity"
+           name="n_pieceIdentity">
+          </div>
+      </div>
+
+      <div class="form-row">
+        
+        <div class="form-group">
+        <label for="numphone">N°de téléphone</label>
+        <input type="text" id="numphone" class="form-control" required [(ngModel)]="client.phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="balance">Balance</label>
+          <select class="form-control" id="balance" [(ngModel)]="client.balance" name="balance">
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="2000">2000</option>
+          </select>
+</div>
+    </div>
+
+      
+  </form>
+<hr>
+
+  <div class="form-row justify-content-end mt-4">
+          <div class="form-group mr-3">
+                <button type="button" class="btn btn-outline-brown mr-2" >Annuler</button>
+                <button type="submit" class="btn btn-brown" (click)="saveClient()">Envoyer</button>
+          </div>
+          <div *ngIf="submitted">
+            <h4>le client est ajouté!</h4>
+            <button class="btn btn-brown" (click)="newClient()">Add</button>
+          </div>
+  </div>
+  </div>
+
+
+
+
+
